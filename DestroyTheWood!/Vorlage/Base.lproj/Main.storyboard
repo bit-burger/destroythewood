@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RZZ-mc-f5J">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="DestroyTheWood_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yyy-4t-kae">
+                                <rect key="frame" x="109" y="74" width="196" height="92"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highscore:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="uOX-se-5Mm">
+                                        <rect key="frame" x="0.0" y="0.0" width="144.33333333333334" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <color key="textColor" red="0.40824142099999999" green="0.1892291307" blue="0.078379698100000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="yGI-Qz-nrq">
+                                        <rect key="frame" x="0.0" y="56" width="85.333333333333329" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <color key="textColor" red="0.40824142099999999" green="0.1892291307" blue="0.078379698100000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0JZ-PH-NJ5">
+                                <rect key="frame" x="50" y="172" width="314" height="552"/>
+                                <connections>
+                                    <segue destination="PXX-fa-KBh" kind="embed" identifier="segueToInGameViewController" id="64t-u0-yfv"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNH-yS-1NO" customClass="SchonSelectButton" customModule="DestroyTheWood_" customModuleProvider="target">
+                                <rect key="frame" x="325" y="64" width="69" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pNH-yS-1NO" secondAttribute="height" id="QOt-Tg-Ffo"/>
+                                </constraints>
+                                <state key="normal" image="wood_pause_button"/>
+                                <connections>
+                                    <action selector="pauseGame:" destination="BV1-FR-VrT" eventType="touchUpInside" id="QRn-xN-Yg8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0JZ-PH-NJ5" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="50" id="5Id-TQ-oei"/>
+                            <constraint firstItem="pNH-yS-1NO" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="20" id="DPF-Ld-DwS"/>
+                            <constraint firstAttribute="width" secondItem="pNH-yS-1NO" secondAttribute="width" multiplier="6" id="EWZ-XG-0nr">
+                                <variation key="heightClass=regular-widthClass=regular" constant="550"/>
+                            </constraint>
+                            <constraint firstItem="0JZ-PH-NJ5" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="Gox-wL-R5M"/>
+                            <constraint firstItem="pNH-yS-1NO" firstAttribute="leading" secondItem="Yyy-4t-kae" secondAttribute="trailing" constant="20" id="aXs-AW-WaT"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="0JZ-PH-NJ5" secondAttribute="trailing" constant="50" id="g27-eI-BtQ"/>
+                            <constraint firstItem="Yyy-4t-kae" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="jPr-7J-ZWu"/>
+                            <constraint firstItem="0JZ-PH-NJ5" firstAttribute="top" secondItem="Yyy-4t-kae" secondAttribute="bottom" constant="6" id="nAN-Gi-gFR"/>
+                            <constraint firstItem="0JZ-PH-NJ5" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="nub-9O-WFb"/>
+                            <constraint firstItem="Yyy-4t-kae" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="30" id="s6b-Ig-lNk"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="pNH-yS-1NO" secondAttribute="trailing" constant="20" id="yXe-89-AeJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HVC-P7-0M9"/>
+                    <connections>
+                        <outlet property="highscoreLabel" destination="uOX-se-5Mm" id="pU7-Tt-pe5"/>
+                        <outlet property="pauseButton" destination="pNH-yS-1NO" id="pZ9-l5-anN"/>
+                        <outlet property="scoreLabel" destination="yGI-Qz-nrq" id="RY6-04-DLh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1407.2" y="150.73891625615764"/>
+        </scene>
+        <!--Starting View Controller-->
+        <scene sceneID="f0k-39-zeI">
+            <objects>
+                <viewController id="RZZ-mc-f5J" customClass="StartingViewController" customModule="DestroyTheWood_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ohz-KE-08K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wood_backround" translatesAutoresizingMaskIntoConstraints="NO" id="Z9k-oQ-nf4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USy-gE-C8D" customClass="SchonSelectButton" customModule="DestroyTheWood_" customModuleProvider="target">
+                                <rect key="frame" x="70" y="202" width="274" height="274"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="USy-gE-C8D" secondAttribute="height" multiplier="1:1" id="o5n-LQ-sK3"/>
+                                </constraints>
+                                <state key="normal" image="wood_button"/>
+                                <connections>
+                                    <action selector="startButton_tapped:" destination="RZZ-mc-f5J" eventType="touchUpInside" id="LRs-dL-vva"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highscore: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIz-sb-zcg">
+                                <rect key="frame" x="107" y="94" width="200" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                <color key="textColor" red="0.40824142099999999" green="0.1892291307" blue="0.078379698100000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="ozr-WD-lh4">
+                                <rect key="frame" x="40" y="526" width="334" height="137"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHv-DJ-XXO" customClass="SchonSelectButton" customModule="DestroyTheWood_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="137" height="137"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cHv-DJ-XXO" secondAttribute="height" multiplier="1:1" id="fTd-ax-KvQ"/>
+                                        </constraints>
+                                        <state key="normal" image="wood_liste_button"/>
+                                        <connections>
+                                            <segue destination="lMJ-he-FAW" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="niY-4F-vbd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCV-jJ-Pyb" customClass="SchonSelectButton" customModule="DestroyTheWood_" customModuleProvider="target">
+                                        <rect key="frame" x="197" y="0.0" width="137" height="137"/>
+                                        <state key="normal" image="wood_einstellungen_button"/>
+                                        <connections>
+                                            <segue destination="Z7Q-Ty-jra" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="PaD-6X-lui"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ozr-WD-lh4" firstAttribute="top" secondItem="USy-gE-C8D" secondAttribute="bottom" constant="50" id="5cM-DM-6lP"/>
+                            <constraint firstItem="USy-gE-C8D" firstAttribute="leading" secondItem="kpV-GS-cpq" secondAttribute="leading" constant="70" id="6ya-Mq-pvf">
+                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="cHv-DJ-XXO" firstAttribute="width" secondItem="USy-gE-C8D" secondAttribute="width" multiplier="1:2" id="8Pl-i8-i02"/>
+                            <constraint firstItem="USy-gE-C8D" firstAttribute="top" secondItem="eIz-sb-zcg" secondAttribute="bottom" constant="60" id="AQ0-mJ-6sf"/>
+                            <constraint firstItem="kpV-GS-cpq" firstAttribute="trailing" secondItem="USy-gE-C8D" secondAttribute="trailing" constant="70" id="CCM-HG-hd8">
+                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="eIz-sb-zcg" firstAttribute="centerX" secondItem="ohz-KE-08K" secondAttribute="centerX" id="K4u-Ra-P8t"/>
+                            <constraint firstItem="USy-gE-C8D" firstAttribute="centerX" secondItem="ohz-KE-08K" secondAttribute="centerX" id="Lf5-zw-jYd"/>
+                            <constraint firstAttribute="bottom" secondItem="Z9k-oQ-nf4" secondAttribute="bottom" id="N0q-Zc-rcb"/>
+                            <constraint firstItem="eIz-sb-zcg" firstAttribute="top" secondItem="kpV-GS-cpq" secondAttribute="top" constant="50" id="NFn-vm-BTT"/>
+                            <constraint firstItem="Z9k-oQ-nf4" firstAttribute="top" secondItem="ohz-KE-08K" secondAttribute="top" id="POh-on-kal"/>
+                            <constraint firstItem="ozr-WD-lh4" firstAttribute="centerX" secondItem="ohz-KE-08K" secondAttribute="centerX" id="ZWB-VM-UfV"/>
+                            <constraint firstItem="Z9k-oQ-nf4" firstAttribute="leading" secondItem="kpV-GS-cpq" secondAttribute="leading" id="ckW-9S-SVW"/>
+                            <constraint firstItem="kpV-GS-cpq" firstAttribute="trailing" secondItem="Z9k-oQ-nf4" secondAttribute="trailing" id="rDI-VO-et0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kpV-GS-cpq"/>
+                    </view>
+                    <connections>
+                        <outlet property="highscore" destination="eIz-sb-zcg" id="BSn-ki-JCh"/>
+                        <segue destination="BV1-FR-VrT" kind="presentation" identifier="segueToGameViewController" modalPresentationStyle="fullScreen" id="Zgv-Br-E0w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wA4-Gk-QrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="365" y="151"/>
+        </scene>
+        <!--Pause Game View Controller-->
+        <scene sceneID="HQN-DH-QGZ">
+            <objects>
+                <viewController id="PXX-fa-KBh" customClass="PauseGameViewController" customModule="DestroyTheWood_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OhF-o2-fkL">
+                        <rect key="frame" x="0.0" y="0.0" width="314" height="552"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="46h-aq-FDM">
+                                <rect key="frame" x="26" y="282.33333333333331" width="262" height="80.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGu-ym-MSV" customClass="SchonSelectButton" customModule="DestroyTheWood_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80.666666666666671" height="80.666666666666671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="PGu-ym-MSV" secondAttribute="height" multiplier="1:1" id="wfV-yr-1CW"/>
+                                        </constraints>
+                                        <state key="normal" image="wood_restart_button"/>
+                                        <connections>
+                                            <action selector="restartButton_tappedWithSender:" destination="PXX-fa-KBh" eventType="touchUpInside" id="HbM-o1-ipW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgn-13-vVO" customClass="SchonSelectButton" customModule="DestroyTheWood_" customModuleProvider="target">
+                                        <rect key="frame" x="90.666666666666657" y="0.0" width="80.666666666666657" height="80.666666666666671"/>
+                                        <state key="normal" image="wood_home_button"/>
+                                        <connections>
+                                            <action selector="homeButton_tappedWithSender:" destination="PXX-fa-KBh" eventType="touchUpInside" id="cSz-kM-CZX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJW-BP-eh8" customClass="SchonSelectButton" customModule="DestroyTheWood_" customModuleProvider="target">
+                                        <rect key="frame" x="181.33333333333334" y="0.0" width="80.666666666666657" height="80.666666666666671"/>
+                                        <state key="normal" image="wood_button"/>
+                                        <connections>
+                                            <action selector="continueButton_tappedWithSender:" destination="PXX-fa-KBh" eventType="touchUpInside" id="dQj-jE-94p"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Lost" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="34" translatesAutoresizingMaskIntoConstraints="NO" id="LJo-5n-DDG">
+                                <rect key="frame" x="20" y="-364.66666666666669" width="274" height="597"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="500"/>
+                                <color key="textColor" red="0.40824142099999999" green="0.1892291307" blue="0.078379698100000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="46h-aq-FDM" firstAttribute="top" secondItem="LJo-5n-DDG" secondAttribute="bottom" constant="100" id="6Ke-ON-6VJ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="3iv-7u-agy" firstAttribute="trailing" secondItem="LJo-5n-DDG" secondAttribute="trailing" constant="20" id="7fA-xO-sC4"/>
+                            <constraint firstItem="46h-aq-FDM" firstAttribute="centerX" secondItem="OhF-o2-fkL" secondAttribute="centerX" id="9eb-iM-mka"/>
+                            <constraint firstItem="LJo-5n-DDG" firstAttribute="centerX" secondItem="OhF-o2-fkL" secondAttribute="centerX" id="Csn-vW-JYD"/>
+                            <constraint firstItem="46h-aq-FDM" firstAttribute="leading" secondItem="OhF-o2-fkL" secondAttribute="leadingMargin" constant="10" id="Q25-eQ-E7x"/>
+                            <constraint firstItem="LJo-5n-DDG" firstAttribute="leading" secondItem="3iv-7u-agy" secondAttribute="leading" constant="20" id="sP2-za-Eri"/>
+                            <constraint firstItem="46h-aq-FDM" firstAttribute="centerY" secondItem="OhF-o2-fkL" secondAttribute="centerY" multiplier="1.35" id="wgf-JH-j0e">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-50"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="46h-aq-FDM" secondAttribute="trailing" constant="10" id="zKC-Ke-iOX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3iv-7u-agy"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="tJW-BP-eh8" id="B4h-fO-r0T"/>
+                        <outlet property="pauseLabel" destination="LJo-5n-DDG" id="nmq-f9-ivF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpm-RK-CQ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420" y="753"/>
+        </scene>
+        <!--Tabelle View Controller-->
+        <scene sceneID="EDv-l6-f7m">
+            <objects>
+                <viewController id="lMJ-he-FAW" customClass="TabelleViewController" customModule="DestroyTheWood_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ZH-Lb-USF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wood_backround" translatesAutoresizingMaskIntoConstraints="NO" id="ZHS-Wc-Up8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bz9-vu-9Re" customClass="SchonSelectButton" customModule="DestroyTheWood_" customModuleProvider="target">
+                                <rect key="frame" x="20" y="54" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="FJd-Yy-LQj"/>
+                                    <constraint firstAttribute="width" constant="75" id="em5-dC-bN4"/>
+                                </constraints>
+                                <state key="normal" image="wood_back_button"/>
+                                <connections>
+                                    <action selector="backButton_tapped:" destination="lMJ-he-FAW" eventType="touchUpInside" id="PI4-Kx-t8w"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tSc-w9-Qb5">
+                                <rect key="frame" x="0.0" y="181" width="414" height="676"/>
+                                <color key="backgroundColor" red="0.74185138939999995" green="0.3859941959" blue="0.19992080330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="separatorColor" red="0.40824142099999999" green="0.1892291307" blue="0.078379698100000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="eigeneTableViewCell" textLabel="wVo-uW-fgj" detailTextLabel="Dyr-TY-M5R" style="IBUITableViewCellStyleValue1" id="khU-k9-NGH" customClass="CustomCell" customModule="DestroyTheWood_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="khU-k9-NGH" id="YqF-5t-d83">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wVo-uW-fgj">
+                                                    <rect key="frame" x="20.000000000000004" y="11.999999999999998" width="33.333333333333336" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.32189065220000002" green="0.14982992410000001" blue="0.058783076699999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dyr-TY-M5R">
+                                                    <rect key="frame" x="350" y="11.999999999999998" width="44" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.32189065220000002" green="0.14982992410000001" blue="0.058783076699999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.70588235290000001" green="0.30588235289999999" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSG-QQ-p9C" userLabel="line">
+                                <rect key="frame" x="0.0" y="176" width="414" height="5"/>
+                                <color key="backgroundColor" red="0.40824142099999999" green="0.1892291307" blue="0.078379698100000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="LJo-OK-wXv"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b9I-wf-AHF" userLabel="line">
+                                <rect key="frame" x="0.0" y="857" width="414" height="5"/>
+                                <color key="backgroundColor" red="0.40824142099999999" green="0.1892291307" blue="0.078379698100000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="Qij-Lt-IlL"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All scores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="27" translatesAutoresizingMaskIntoConstraints="NO" id="xUr-cw-hxu">
+                                <rect key="frame" x="100" y="69" width="214" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                <color key="textColor" red="0.40824142099999999" green="0.1892291307" blue="0.078379698100000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PU5-m6-IbO" userLabel="group">
+                                <rect key="frame" x="0.0" y="129" width="414" height="47"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7en-p6-OG3">
+                                        <rect key="frame" x="8" y="8" width="398" height="31"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WwJ-Vw-ryS" customClass="SelectSegmentedControl" customModule="DestroyTheWood_" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="291" height="32"/>
+                                                <color key="backgroundColor" red="0.70654958489999997" green="0.30753248929999999" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <segments>
+                                                    <segment title="Letztes"/>
+                                                    <segment title="Erstes"/>
+                                                    <segment title="Niedrig"/>
+                                                    <segment title="Hoch"/>
+                                                </segments>
+                                                <color key="selectedSegmentTintColor" red="0.40824142099999999" green="0.1892291307" blue="0.078379698100000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <connections>
+                                                    <action selector="segmentedControllValueChanged:" destination="lMJ-he-FAW" eventType="valueChanged" id="S83-P2-Ly6"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="APt-Nv-fzK" customClass="SelectSegmentedControl" customModule="DestroyTheWood_" customModuleProvider="target">
+                                                <rect key="frame" x="299" y="0.0" width="99" height="32"/>
+                                                <color key="backgroundColor" red="0.70654958489999997" green="0.30753248929999999" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <segments>
+                                                    <segment title="ohne"/>
+                                                    <segment title="mit"/>
+                                                </segments>
+                                                <color key="selectedSegmentTintColor" red="0.40824142099999999" green="0.1892291307" blue="0.078379698100000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <connections>
+                                                    <action selector="segmentedControllValueChanged:" destination="lMJ-he-FAW" eventType="valueChanged" id="NAr-oK-KCd"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="7en-p6-OG3" firstAttribute="centerY" secondItem="PU5-m6-IbO" secondAttribute="centerY" id="N7B-9n-qEB"/>
+                                    <constraint firstAttribute="trailing" secondItem="7en-p6-OG3" secondAttribute="trailing" constant="8" id="SHZ-en-OEA"/>
+                                    <constraint firstItem="7en-p6-OG3" firstAttribute="leading" secondItem="PU5-m6-IbO" secondAttribute="leading" constant="8" id="gmJ-Yj-28J"/>
+                                    <constraint firstAttribute="height" constant="47" id="iML-Gs-h3h"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PU5-m6-IbO" firstAttribute="leading" secondItem="Apb-RO-Pt6" secondAttribute="leading" id="3A5-Zc-MBw"/>
+                            <constraint firstItem="NSG-QQ-p9C" firstAttribute="top" secondItem="PU5-m6-IbO" secondAttribute="bottom" id="54F-HQ-yLD"/>
+                            <constraint firstItem="PU5-m6-IbO" firstAttribute="top" secondItem="Bz9-vu-9Re" secondAttribute="bottom" id="54U-Yf-gNL"/>
+                            <constraint firstItem="tSc-w9-Qb5" firstAttribute="leading" secondItem="Apb-RO-Pt6" secondAttribute="leading" id="6CV-SB-spf"/>
+                            <constraint firstItem="ZHS-Wc-Up8" firstAttribute="centerY" secondItem="7ZH-Lb-USF" secondAttribute="centerY" id="6Wu-9b-Hsn"/>
+                            <constraint firstItem="NSG-QQ-p9C" firstAttribute="leading" secondItem="Apb-RO-Pt6" secondAttribute="leading" id="8p4-YA-i2v"/>
+                            <constraint firstItem="tSc-w9-Qb5" firstAttribute="top" secondItem="PU5-m6-IbO" secondAttribute="bottom" constant="5" id="BLe-yL-HDS"/>
+                            <constraint firstItem="xUr-cw-hxu" firstAttribute="top" secondItem="Apb-RO-Pt6" secondAttribute="top" constant="25" id="E68-Af-AfT"/>
+                            <constraint firstItem="tSc-w9-Qb5" firstAttribute="top" secondItem="NSG-QQ-p9C" secondAttribute="bottom" id="EUd-tW-e20"/>
+                            <constraint firstItem="ZHS-Wc-Up8" firstAttribute="leading" secondItem="7ZH-Lb-USF" secondAttribute="leading" id="Jpq-BT-jm4"/>
+                            <constraint firstItem="xUr-cw-hxu" firstAttribute="leading" secondItem="Apb-RO-Pt6" secondAttribute="leading" constant="100" id="Kba-43-rsL"/>
+                            <constraint firstItem="NSG-QQ-p9C" firstAttribute="centerX" secondItem="7ZH-Lb-USF" secondAttribute="centerX" id="P3b-vx-Ugf"/>
+                            <constraint firstItem="ZHS-Wc-Up8" firstAttribute="top" secondItem="7ZH-Lb-USF" secondAttribute="top" id="SJ8-JN-qqr"/>
+                            <constraint firstItem="xUr-cw-hxu" firstAttribute="centerX" secondItem="7ZH-Lb-USF" secondAttribute="centerX" id="V5q-bG-tfs"/>
+                            <constraint firstAttribute="trailing" secondItem="ZHS-Wc-Up8" secondAttribute="trailing" id="WPm-ro-lIn"/>
+                            <constraint firstAttribute="trailing" secondItem="b9I-wf-AHF" secondAttribute="trailing" id="Z7h-FN-VTc"/>
+                            <constraint firstItem="ZHS-Wc-Up8" firstAttribute="centerX" secondItem="7ZH-Lb-USF" secondAttribute="centerX" id="aUl-OM-ah2"/>
+                            <constraint firstItem="tSc-w9-Qb5" firstAttribute="bottom" secondItem="Apb-RO-Pt6" secondAttribute="bottom" constant="-5" id="etf-tm-Xe1"/>
+                            <constraint firstItem="NSG-QQ-p9C" firstAttribute="trailing" secondItem="Apb-RO-Pt6" secondAttribute="trailing" id="fv6-zZ-S1n"/>
+                            <constraint firstItem="Bz9-vu-9Re" firstAttribute="top" secondItem="Apb-RO-Pt6" secondAttribute="top" constant="10" id="hCa-IW-CiQ"/>
+                            <constraint firstItem="tSc-w9-Qb5" firstAttribute="trailing" secondItem="Apb-RO-Pt6" secondAttribute="trailing" id="hck-TV-Wyr"/>
+                            <constraint firstItem="Apb-RO-Pt6" firstAttribute="trailing" secondItem="PU5-m6-IbO" secondAttribute="trailing" id="jWB-lD-Y2P"/>
+                            <constraint firstAttribute="bottom" secondItem="ZHS-Wc-Up8" secondAttribute="bottom" id="k8w-eP-9zB"/>
+                            <constraint firstItem="Apb-RO-Pt6" firstAttribute="trailing" secondItem="xUr-cw-hxu" secondAttribute="trailing" constant="100" id="nOT-rh-XYF"/>
+                            <constraint firstItem="Apb-RO-Pt6" firstAttribute="trailing" secondItem="NSG-QQ-p9C" secondAttribute="trailing" id="r2x-St-m5U"/>
+                            <constraint firstItem="NSG-QQ-p9C" firstAttribute="centerX" secondItem="7ZH-Lb-USF" secondAttribute="centerX" id="sYl-FN-o7c"/>
+                            <constraint firstItem="Apb-RO-Pt6" firstAttribute="bottom" secondItem="b9I-wf-AHF" secondAttribute="bottom" id="u8H-5a-Oca"/>
+                            <constraint firstItem="NSG-QQ-p9C" firstAttribute="leading" secondItem="Apb-RO-Pt6" secondAttribute="leading" id="vAw-Hd-Q6r"/>
+                            <constraint firstItem="b9I-wf-AHF" firstAttribute="leading" secondItem="Apb-RO-Pt6" secondAttribute="leading" id="vXi-fw-P8o"/>
+                            <constraint firstItem="Bz9-vu-9Re" firstAttribute="leading" secondItem="Apb-RO-Pt6" secondAttribute="leading" constant="20" id="yWI-Ud-kiT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Apb-RO-Pt6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8R9-eJ-ItD"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="WwJ-Vw-ryS" id="FOR-6Z-OfN"/>
+                        <outlet property="segmentedControlMitOhne" destination="APt-Nv-fzK" id="fjd-NM-S53"/>
+                        <outlet property="tableView" destination="tSc-w9-Qb5" id="Ss8-go-BrD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lhI-qT-Bht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18.399999999999999" y="846.9265367316342"/>
+        </scene>
+        <!--Einstellungen View Controller-->
+        <scene sceneID="PgB-bF-hqd">
+            <objects>
+                <viewController id="Z7Q-Ty-jra" customClass="EinstellungenViewController" customModule="DestroyTheWood_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GBY-0x-PL2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wood_backround" translatesAutoresizingMaskIntoConstraints="NO" id="KfU-wL-L5o">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BopBop:  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffG-RV-WZ0">
+                                <rect key="frame" x="30.000000000000007" y="379.33333333333331" width="75.666666666666686" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" red="0.40824142099999999" green="0.1892291307" blue="0.078379698100000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="6LF-Fw-1O0">
+                                <rect key="frame" x="28" y="249.33333333333337" width="358" height="31"/>
+                                <color key="tintColor" red="0.40824142099999999" green="0.1892291307" blue="0.078379698100000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="maximumTrackTintColor" red="0.74185138939999995" green="0.3859941959" blue="0.19992080330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="thumbTintColor" red="0.74185138939999995" green="0.3859941959" blue="0.19992080330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="slider_valueChanged:" destination="Z7Q-Ty-jra" eventType="valueChanged" id="J88-Lq-atg"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch distance: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCl-Rc-9gs">
+                                <rect key="frame" x="30" y="179" width="128.33333333333334" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" red="0.40824142099999999" green="0.1892291307" blue="0.078379698100000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGt-z7-wnx" customClass="SchonSelectButton" customModule="DestroyTheWood_" customModuleProvider="target">
+                                <rect key="frame" x="20" y="54" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Owv-hM-7p7"/>
+                                    <constraint firstAttribute="height" constant="75" id="bO1-j3-SNU"/>
+                                </constraints>
+                                <state key="normal" image="wood_back_button"/>
+                                <connections>
+                                    <action selector="backButton_tapped:" destination="Z7Q-Ty-jra" eventType="touchUpInside" id="zHL-Jn-2iU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gry-Ha-Joh">
+                                <rect key="frame" x="160.66666666666666" y="71" width="92.666666666666657" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <color key="textColor" red="0.40824142099999999" green="0.1892291307" blue="0.078379698100000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="azS-k9-kjd">
+                                <rect key="frame" x="30" y="449.66666666666669" width="51" height="31"/>
+                                <color key="onTintColor" red="0.40824142099999999" green="0.1892291307" blue="0.078379698100000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="thumbTintColor" red="0.74185138939999995" green="0.3859941959" blue="0.19992080330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="bobbob_valueChanged:" destination="Z7Q-Ty-jra" eventType="valueChanged" id="1NF-XG-Du2"/>
+                                </connections>
+                            </switch>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="137" translatesAutoresizingMaskIntoConstraints="NO" id="LLc-Vz-rb8">
+                                <rect key="frame" x="20" y="838" width="374" height="24"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNE-Qn-xai" customClass="SchonSelectButton" customModule="DestroyTheWood_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Alles außer highscore zurücksetzen">
+                                            <color key="titleColor" red="0.43965560199999998" green="0.1736907661" blue="0.035202294590000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="zurücksetzen:" destination="Z7Q-Ty-jra" eventType="touchUpInside" id="AoI-be-jlQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0j-8R-c6v" customClass="SchonSelectButton" customModule="DestroyTheWood_" customModuleProvider="target">
+                                        <rect key="frame" x="309" y="0.0" width="65" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="zurücksetzen">
+                                            <color key="titleColor" red="0.43965560199999998" green="0.1736907661" blue="0.035202294590000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="zurücksetzen:" destination="Z7Q-Ty-jra" eventType="touchUpInside" id="PhH-GX-gje"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ffG-RV-WZ0" firstAttribute="leading" secondItem="z0r-jH-NUm" secondAttribute="leading" constant="30" id="5yl-12-CcG"/>
+                            <constraint firstAttribute="bottom" secondItem="KfU-wL-L5o" secondAttribute="bottom" id="CBU-Kw-82G"/>
+                            <constraint firstItem="xCl-Rc-9gs" firstAttribute="top" secondItem="FGt-z7-wnx" secondAttribute="bottom" constant="50" id="CUD-Ez-fkW"/>
+                            <constraint firstAttribute="trailing" secondItem="KfU-wL-L5o" secondAttribute="trailing" id="Cbu-bJ-fei"/>
+                            <constraint firstItem="6LF-Fw-1O0" firstAttribute="top" secondItem="xCl-Rc-9gs" secondAttribute="bottom" constant="50" id="DLU-bX-IGz"/>
+                            <constraint firstItem="FGt-z7-wnx" firstAttribute="leading" secondItem="z0r-jH-NUm" secondAttribute="leading" constant="20" id="DvU-Ic-jlc"/>
+                            <constraint firstItem="FGt-z7-wnx" firstAttribute="top" secondItem="z0r-jH-NUm" secondAttribute="top" constant="10" id="GLl-Dk-p5b"/>
+                            <constraint firstItem="gry-Ha-Joh" firstAttribute="top" secondItem="z0r-jH-NUm" secondAttribute="top" constant="27" id="J9u-8g-p26"/>
+                            <constraint firstItem="xCl-Rc-9gs" firstAttribute="leading" secondItem="z0r-jH-NUm" secondAttribute="leading" constant="30" id="Wga-Vy-4AM"/>
+                            <constraint firstItem="LLc-Vz-rb8" firstAttribute="centerX" secondItem="GBY-0x-PL2" secondAttribute="centerX" id="WkD-wu-skV"/>
+                            <constraint firstItem="azS-k9-kjd" firstAttribute="leading" secondItem="z0r-jH-NUm" secondAttribute="leading" constant="30" id="YIt-Dw-kHa"/>
+                            <constraint firstItem="KfU-wL-L5o" firstAttribute="leading" secondItem="GBY-0x-PL2" secondAttribute="leading" id="Ywn-Te-dvU"/>
+                            <constraint firstItem="gry-Ha-Joh" firstAttribute="centerX" secondItem="GBY-0x-PL2" secondAttribute="centerX" id="gh7-q9-PxH"/>
+                            <constraint firstItem="azS-k9-kjd" firstAttribute="top" secondItem="ffG-RV-WZ0" secondAttribute="bottom" constant="50" id="hxM-W8-XJm"/>
+                            <constraint firstItem="LLc-Vz-rb8" firstAttribute="bottom" secondItem="z0r-jH-NUm" secondAttribute="bottom" id="naB-0d-H54"/>
+                            <constraint firstItem="z0r-jH-NUm" firstAttribute="trailing" secondItem="6LF-Fw-1O0" secondAttribute="trailing" constant="30" id="q4p-Gd-Qkv"/>
+                            <constraint firstItem="6LF-Fw-1O0" firstAttribute="leading" secondItem="z0r-jH-NUm" secondAttribute="leading" constant="30" id="rXN-Aj-vyp"/>
+                            <constraint firstItem="KfU-wL-L5o" firstAttribute="top" secondItem="GBY-0x-PL2" secondAttribute="top" id="vyx-5A-dyB"/>
+                            <constraint firstItem="ffG-RV-WZ0" firstAttribute="top" secondItem="6LF-Fw-1O0" secondAttribute="bottom" constant="100" id="xFH-Wa-5bA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z0r-jH-NUm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GAD-pL-zIL"/>
+                    <connections>
+                        <outlet property="BobBobLabel" destination="ffG-RV-WZ0" id="i86-mL-7ge"/>
+                        <outlet property="bopBopSwitch" destination="azS-k9-kjd" id="CnD-sk-ALf"/>
+                        <outlet property="slider" destination="6LF-Fw-1O0" id="aTf-f7-aoa"/>
+                        <outlet property="touchDistanceLabel" destination="xCl-Rc-9gs" id="S6k-CA-m7b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KUs-lk-aFA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734.78260869565224" y="859.82142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wood_back_button" width="1853" height="1849"/>
+        <image name="wood_backround" width="607" height="910"/>
+        <image name="wood_button" width="886" height="886"/>
+        <image name="wood_einstellungen_button" width="1950" height="1941"/>
+        <image name="wood_home_button" width="1967" height="2016"/>
+        <image name="wood_liste_button" width="1835" height="1825"/>
+        <image name="wood_pause_button" width="1963" height="1890"/>
+        <image name="wood_restart_button" width="1891" height="1952"/>
+    </resources>
+</document>

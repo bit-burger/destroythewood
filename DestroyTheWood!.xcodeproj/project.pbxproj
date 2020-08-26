@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8060E08245ED7F2002FC5D5 /* SFG.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8060E07245ED7F2002FC5D5 /* SFG.swift */; };
+		F8060E0A245ED91E002FC5D5 /* IFG.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8060E09245ED91E002FC5D5 /* IFG.swift */; };
+		F8060E0C245ED9B3002FC5D5 /* globale_variablen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8060E0B245ED9B3002FC5D5 /* globale_variablen.swift */; };
+		F82535EA24816F0500C7EC92 /* LobbyMusik.wav in Resources */ = {isa = PBXBuildFile; fileRef = F82535E824816F0500C7EC92 /* LobbyMusik.wav */; };
+		F82535ED2481700600C7EC92 /* MainMusik.wav in Resources */ = {isa = PBXBuildFile; fileRef = F82535EC2481700600C7EC92 /* MainMusik.wav */; };
+		F85DF05E247D839E007362FE /* SelectSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85DF05D247D839E007362FE /* SelectSegmentedControl.swift */; };
+		F877D521245DB53600C5D2E1 /* PauseGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F877D520245DB53600C5D2E1 /* PauseGameViewController.swift */; };
+		F877D523245DC78300C5D2E1 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F877D522245DC78300C5D2E1 /* Protocols.swift */; };
+		F89CD4B8245F08BC00ED0A89 /* WoodPatternBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89CD4B7245F08BC00ED0A89 /* WoodPatternBox.swift */; };
+		F8AD1589245D7CB200F21D13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD1588245D7CB200F21D13 /* AppDelegate.swift */; };
+		F8AD158F245D7CB200F21D13 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD158E245D7CB200F21D13 /* GameScene.swift */; };
+		F8AD1591245D7CB200F21D13 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD1590245D7CB200F21D13 /* GameViewController.swift */; };
+		F8AD1594245D7CB200F21D13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8AD1592245D7CB200F21D13 /* Main.storyboard */; };
+		F8AD1596245D7CB400F21D13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8AD1595245D7CB400F21D13 /* Assets.xcassets */; };
+		F8AD1599245D7CB400F21D13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8AD1597245D7CB400F21D13 /* LaunchScreen.storyboard */; };
+		F8AD15A1245D821300F21D13 /* WoodTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD15A0245D821300F21D13 /* WoodTile.swift */; };
+		F8AD15A3245D8BF900F21D13 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD15A2245D8BF900F21D13 /* Configuration.swift */; };
+		F8AD15A5245D9AB900F21D13 /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD15A4245D9AB900F21D13 /* StartingViewController.swift */; };
+		F8ADDE062463073B00DEDF6A /* EinstellungenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ADDE052463073B00DEDF6A /* EinstellungenViewController.swift */; };
+		F8ADDE082463076500DEDF6A /* TabelleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ADDE072463076500DEDF6A /* TabelleViewController.swift */; };
+		F8ADDE0A24631A2400DEDF6A /* NFG.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ADDE0924631A2400DEDF6A /* NFG.swift */; };
+		F8B0CF61246410E000448D77 /* EigeneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B0CF60246410E000448D77 /* EigeneCell.swift */; };
+		F8B0CF6A2464499B00448D77 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B0CF692464499B00448D77 /* CustomCell.swift */; };
+		F8CFE93D2462230500091CE5 /* SchonSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFE93C2462230500091CE5 /* SchonSelectButton.swift */; };
+		F8DFB346246B547F001160B1 /* sound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = F8DFB345246B547F001160B1 /* sound1.wav */; };
+		F8DFB348246B55FF001160B1 /* sound2.wav in Resources */ = {isa = PBXBuildFile; fileRef = F8DFB347246B55FF001160B1 /* sound2.wav */; };
+		F8DFB34A246B5693001160B1 /* sound3.wav in Resources */ = {isa = PBXBuildFile; fileRef = F8DFB349246B5693001160B1 /* sound3.wav */; };
+		F8DFB34C246B5700001160B1 /* sound4.wav in Resources */ = {isa = PBXBuildFile; fileRef = F8DFB34B246B56FF001160B1 /* sound4.wav */; };
+		F8DFB34F246B5A29001160B1 /* _switch2.wav in Resources */ = {isa = PBXBuildFile; fileRef = F8DFB34D246B5A29001160B1 /* _switch2.wav */; };
+		F8DFB350246B5A29001160B1 /* _switch1.wav in Resources */ = {isa = PBXBuildFile; fileRef = F8DFB34E246B5A29001160B1 /* _switch1.wav */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F8060E07245ED7F2002FC5D5 /* SFG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFG.swift; sourceTree = "<group>"; };
+		F8060E09245ED91E002FC5D5 /* IFG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFG.swift; sourceTree = "<group>"; };
+		F8060E0B245ED9B3002FC5D5 /* globale_variablen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = globale_variablen.swift; sourceTree = "<group>"; };
+		F82535E824816F0500C7EC92 /* LobbyMusik.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LobbyMusik.wav; sourceTree = "<group>"; };
+		F82535EC2481700600C7EC92 /* MainMusik.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = MainMusik.wav; sourceTree = "<group>"; };
+		F85DF05D247D839E007362FE /* SelectSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSegmentedControl.swift; sourceTree = "<group>"; };
+		F877D520245DB53600C5D2E1 /* PauseGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseGameViewController.swift; sourceTree = "<group>"; };
+		F877D522245DC78300C5D2E1 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		F89CD4B7245F08BC00ED0A89 /* WoodPatternBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodPatternBox.swift; sourceTree = "<group>"; };
+		F8AD1585245D7CB200F21D13 /* DestroyTheWood!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DestroyTheWood!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8AD1588245D7CB200F21D13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F8AD158E245D7CB200F21D13 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		F8AD1590245D7CB200F21D13 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F8AD1593245D7CB200F21D13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8AD1595245D7CB400F21D13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8AD1598245D7CB400F21D13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F8AD159A245D7CB400F21D13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8AD15A0245D821300F21D13 /* WoodTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodTile.swift; sourceTree = "<group>"; };
+		F8AD15A2245D8BF900F21D13 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		F8AD15A4245D9AB900F21D13 /* StartingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingViewController.swift; sourceTree = "<group>"; };
+		F8ADDE052463073B00DEDF6A /* EinstellungenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EinstellungenViewController.swift; sourceTree = "<group>"; };
+		F8ADDE072463076500DEDF6A /* TabelleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelleViewController.swift; sourceTree = "<group>"; };
+		F8ADDE0924631A2400DEDF6A /* NFG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFG.swift; sourceTree = "<group>"; };
+		F8B0CF60246410E000448D77 /* EigeneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EigeneCell.swift; sourceTree = "<group>"; };
+		F8B0CF692464499B00448D77 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		F8CFE93C2462230500091CE5 /* SchonSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchonSelectButton.swift; sourceTree = "<group>"; };
+		F8DFB33F246B1A4F001160B1 /* DestroyTheWood!.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "DestroyTheWood!.entitlements"; sourceTree = "<group>"; };
+		F8DFB345246B547F001160B1 /* sound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound1.wav; sourceTree = "<group>"; };
+		F8DFB347246B55FF001160B1 /* sound2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound2.wav; sourceTree = "<group>"; };
+		F8DFB349246B5693001160B1 /* sound3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound3.wav; sourceTree = "<group>"; };
+		F8DFB34B246B56FF001160B1 /* sound4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound4.wav; sourceTree = "<group>"; };
+		F8DFB34D246B5A29001160B1 /* _switch2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = _switch2.wav; sourceTree = "<group>"; };
+		F8DFB34E246B5A29001160B1 /* _switch1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = _switch1.wav; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8AD1582245D7CB200F21D13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F877D524245DD13D00C5D2E1 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F877D522245DC78300C5D2E1 /* Protocols.swift */,
+				F8AD15A2245D8BF900F21D13 /* Configuration.swift */,
+				F8060E0B245ED9B3002FC5D5 /* globale_variablen.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		F877D525245DD15400C5D2E1 /* Vorlage */ = {
+			isa = PBXGroup;
+			children = (
+				F8AD1592245D7CB200F21D13 /* Main.storyboard */,
+				F8AD1597245D7CB400F21D13 /* LaunchScreen.storyboard */,
+				F8AD1588245D7CB200F21D13 /* AppDelegate.swift */,
+				F8AD1595245D7CB400F21D13 /* Assets.xcassets */,
+			);
+			path = Vorlage;
+			sourceTree = "<group>";
+		};
+		F877D526245DD19D00C5D2E1 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				F8AD15A0245D821300F21D13 /* WoodTile.swift */,
+				F89CD4B7245F08BC00ED0A89 /* WoodPatternBox.swift */,
+				F8060E07245ED7F2002FC5D5 /* SFG.swift */,
+				F8060E09245ED91E002FC5D5 /* IFG.swift */,
+				F8ADDE0924631A2400DEDF6A /* NFG.swift */,
+				F8CFE93C2462230500091CE5 /* SchonSelectButton.swift */,
+				F8B0CF60246410E000448D77 /* EigeneCell.swift */,
+				F8B0CF692464499B00448D77 /* CustomCell.swift */,
+				F85DF05D247D839E007362FE /* SelectSegmentedControl.swift */,
+			);
+			path = CustomClasses;
+			sourceTree = "<group>";
+		};
+		F877D528245DD1EA00C5D2E1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F8AD158E245D7CB200F21D13 /* GameScene.swift */,
+				F8AD1590245D7CB200F21D13 /* GameViewController.swift */,
+				F877D520245DB53600C5D2E1 /* PauseGameViewController.swift */,
+				F8AD15A4245D9AB900F21D13 /* StartingViewController.swift */,
+				F8ADDE052463073B00DEDF6A /* EinstellungenViewController.swift */,
+				F8ADDE072463076500DEDF6A /* TabelleViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F8AD157C245D7CB200F21D13 = {
+			isa = PBXGroup;
+			children = (
+				F8AD1587245D7CB200F21D13 /* DestroyTheWood! */,
+				F8AD1586245D7CB200F21D13 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8AD1586245D7CB200F21D13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8AD1585245D7CB200F21D13 /* DestroyTheWood!.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8AD1587245D7CB200F21D13 /* DestroyTheWood! */ = {
+			isa = PBXGroup;
+			children = (
+				F8DFB344246B52C0001160B1 /* Sounds */,
+				F8DFB33F246B1A4F001160B1 /* DestroyTheWood!.entitlements */,
+				F8AD159A245D7CB400F21D13 /* Info.plist */,
+				F877D528245DD1EA00C5D2E1 /* Scenes */,
+				F877D526245DD19D00C5D2E1 /* CustomClasses */,
+				F877D525245DD15400C5D2E1 /* Vorlage */,
+				F877D524245DD13D00C5D2E1 /* Configuration */,
+			);
+			path = "DestroyTheWood!";
+			sourceTree = "<group>";
+		};
+		F8DFB344246B52C0001160B1 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F8DFB34E246B5A29001160B1 /* _switch1.wav */,
+				F8DFB34D246B5A29001160B1 /* _switch2.wav */,
+				F8DFB345246B547F001160B1 /* sound1.wav */,
+				F8DFB347246B55FF001160B1 /* sound2.wav */,
+				F8DFB349246B5693001160B1 /* sound3.wav */,
+				F8DFB34B246B56FF001160B1 /* sound4.wav */,
+				F82535E824816F0500C7EC92 /* LobbyMusik.wav */,
+				F82535EC2481700600C7EC92 /* MainMusik.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8AD1584245D7CB200F21D13 /* DestroyTheWood! */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8AD159D245D7CB400F21D13 /* Build configuration list for PBXNativeTarget "DestroyTheWood!" */;
+			buildPhases = (
+				F8AD1581245D7CB200F21D13 /* Sources */,
+				F8AD1582245D7CB200F21D13 /* Frameworks */,
+				F8AD1583245D7CB200F21D13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DestroyTheWood!";
+			productName = "DestroyTheWood!";
+			productReference = F8AD1585245D7CB200F21D13 /* DestroyTheWood!.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8AD157D245D7CB200F21D13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Tony Borchert";
+				TargetAttributes = {
+					F8AD1584245D7CB200F21D13 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = F8AD1580245D7CB200F21D13 /* Build configuration list for PBXProject "DestroyTheWood!" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8AD157C245D7CB200F21D13;
+			productRefGroup = F8AD1586245D7CB200F21D13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8AD1584245D7CB200F21D13 /* DestroyTheWood! */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8AD1583245D7CB200F21D13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8DFB348246B55FF001160B1 /* sound2.wav in Resources */,
+				F8DFB350246B5A29001160B1 /* _switch1.wav in Resources */,
+				F8AD1594245D7CB200F21D13 /* Main.storyboard in Resources */,
+				F8DFB34A246B5693001160B1 /* sound3.wav in Resources */,
+				F8DFB34F246B5A29001160B1 /* _switch2.wav in Resources */,
+				F8DFB34C246B5700001160B1 /* sound4.wav in Resources */,
+				F8AD1596245D7CB400F21D13 /* Assets.xcassets in Resources */,
+				F82535EA24816F0500C7EC92 /* LobbyMusik.wav in Resources */,
+				F82535ED2481700600C7EC92 /* MainMusik.wav in Resources */,
+				F8AD1599245D7CB400F21D13 /* LaunchScreen.storyboard in Resources */,
+				F8DFB346246B547F001160B1 /* sound1.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8AD1581245D7CB200F21D13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8AD15A1245D821300F21D13 /* WoodTile.swift in Sources */,
+				F89CD4B8245F08BC00ED0A89 /* WoodPatternBox.swift in Sources */,
+				F8AD15A3245D8BF900F21D13 /* Configuration.swift in Sources */,
+				F8AD158F245D7CB200F21D13 /* GameScene.swift in Sources */,
+				F8AD1591245D7CB200F21D13 /* GameViewController.swift in Sources */,
+				F8ADDE062463073B00DEDF6A /* EinstellungenViewController.swift in Sources */,
+				F8CFE93D2462230500091CE5 /* SchonSelectButton.swift in Sources */,
+				F8B0CF6A2464499B00448D77 /* CustomCell.swift in Sources */,
+				F8B0CF61246410E000448D77 /* EigeneCell.swift in Sources */,
+				F8060E0C245ED9B3002FC5D5 /* globale_variablen.swift in Sources */,
+				F85DF05E247D839E007362FE /* SelectSegmentedControl.swift in Sources */,
+				F877D521245DB53600C5D2E1 /* PauseGameViewController.swift in Sources */,
+				F8AD15A5245D9AB900F21D13 /* StartingViewController.swift in Sources */,
+				F8060E08245ED7F2002FC5D5 /* SFG.swift in Sources */,
+				F8AD1589245D7CB200F21D13 /* AppDelegate.swift in Sources */,
+				F8060E0A245ED91E002FC5D5 /* IFG.swift in Sources */,
+				F8ADDE082463076500DEDF6A /* TabelleViewController.swift in Sources */,
+				F877D523245DC78300C5D2E1 /* Protocols.swift in Sources */,
+				F8ADDE0A24631A2400DEDF6A /* NFG.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F8AD1592245D7CB200F21D13 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8AD1593245D7CB200F21D13 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F8AD1597245D7CB400F21D13 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8AD1598245D7CB400F21D13 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8AD159B245D7CB400F21D13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F8AD159C245D7CB400F21D13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8AD159E245D7CB400F21D13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "DestroyTheWood!/DestroyTheWood!.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43RF5P289M;
+				INFOPLIST_FILE = "DestroyTheWood!/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "I-like.DestroyTheWood";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8AD159F245D7CB400F21D13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "DestroyTheWood!/DestroyTheWood!.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43RF5P289M;
+				INFOPLIST_FILE = "DestroyTheWood!/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "I-like.DestroyTheWood";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8AD1580245D7CB200F21D13 /* Build configuration list for PBXProject "DestroyTheWood!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8AD159B245D7CB400F21D13 /* Debug */,
+				F8AD159C245D7CB400F21D13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8AD159D245D7CB400F21D13 /* Build configuration list for PBXNativeTarget "DestroyTheWood!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8AD159E245D7CB400F21D13 /* Debug */,
+				F8AD159F245D7CB400F21D13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8AD157D245D7CB200F21D13 /* Project object */;
+}
