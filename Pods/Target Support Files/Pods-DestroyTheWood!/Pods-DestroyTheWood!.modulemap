@@ -1,0 +1,6 @@
+framework module Pods_DestroyTheWood_ {
+  umbrella header "Pods-DestroyTheWood!-umbrella.h"
+
+  export *
+  module * { export * }
+}
