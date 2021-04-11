@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1080529249395-pg6g47pr4rr946ff6dtbkscntmkda1kv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1080529249395-pg6g47pr4rr946ff6dtbkscntmkda1kv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD2OZPAyAquQ99blEbk6mCw1yCV7ltlXIM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1080529249395</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>I-like.DestroyTheWood</string>
+	<key>PROJECT_ID</key>
+	<string>destroythewood</string>
+	<key>STORAGE_BUCKET</key>
+	<string>destroythewood.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1080529249395:ios:7ca770b838dc4f59ab7606</string>
+	<key>DATABASE_URL</key>
+	<string>https://destroythewood.firebaseio.com</string>
+</dict>
+</plist>
