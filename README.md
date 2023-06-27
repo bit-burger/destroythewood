@@ -1,1 +1,1 @@
-[More infos in german](https://tonyborchert.xyz/destroythewood/)
+[More infos in german](https://tonyborchert.tech/destroythewood/)
